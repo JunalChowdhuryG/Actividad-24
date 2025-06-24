@@ -55,9 +55,19 @@ Abre terminales adicionales para seguir los logs en tiempo real:
   ![](img/docker-compose%20logs%20-f%20airflow-scheduler.png)
 
 ### 5. Accede a la interfaz de Airflow
+1. Cree un usuario `admin`
+```
+docker-compose exec airflow-webserver airflow users create \
+  --username admin \
+  --firstname Admin \
+  --lastname User \
+  --role Admin \
+  --email admin@example.com \
+  --password admin
+```
 
-1. Abre tu navegador en: [http://localhost:8080](http://localhost:8080).
-2. Inicia sesion con:
+2. Abre tu navegador en: [http://localhost:8080](http://localhost:8080)
+3. Inicia sesion con:
    - **Usuario**: `admin`
    - **Contraseña**: `admin`
 
